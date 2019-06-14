@@ -8,7 +8,7 @@ const ctr = require('../../controller/user')
 router.get('/', async (req, resp) =>{
     try {
         let data = await ctr.getClients()
-        resp.status(200).send(data)
+        resp.status(200).send({status: 200, data : [data], detail: {size: data.length}})
     } catch (error) {
         resp.status(500).send("Ocurrio un problema")
     }
