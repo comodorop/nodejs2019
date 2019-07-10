@@ -19,6 +19,7 @@ app.use('/logins',user)
 
 app.listen('8080', () =>{
     if(process.env.DEVELOP === "true"){
+        console.log("Hubo un cambio")
         console.log('Se inicio el server en el puerto 8080')
     }
 })
